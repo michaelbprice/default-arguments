@@ -1,9 +1,8 @@
 #include <cassert>
-#include <cctype>
 
 unsigned char fn (unsigned char c = 'a', int n = 42)
 {
-    return n == 42 ? c : std::toupper(c) ;
+    return n == 42 ? c : '0';
 }
 
 int main ()
@@ -23,13 +22,13 @@ int main ()
 
   {
     unsigned char fn (unsigned char, int = 10);
-    assert(fn('a') == 'A');
+    assert(fn('a') == '0');
   }
 
   {
     unsigned char fn (unsigned char, int = 10);
     unsigned char fn (unsigned char = 'z', int);
-    assert(fn() == 'Z');
+    assert(fn() == '0');
   }
 
     return 0;

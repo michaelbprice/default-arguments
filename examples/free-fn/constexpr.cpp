@@ -1,11 +1,11 @@
-constexpr int fn (int n = 42)
+constexpr unsigned char fn (unsigned char c, int n = 42)
 {
-    return n;
+    return (n == 42) ? c : '0';
 }
 
 int main ()
 {
-    static_assert(fn() == 42);
-    static_assert(fn(0) == 0);
+    static_assert(fn('a') == 'a');
+    static_assert(fn('a', 0) == '0');
     return 0;
 }
