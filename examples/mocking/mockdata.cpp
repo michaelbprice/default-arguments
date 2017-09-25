@@ -1,3 +1,4 @@
+// GCC> g++ -std=c++14
 #include <experimental/array>
 #include <cassert>
 #include <fstream>
