@@ -22,7 +22,7 @@ struct D_two : Base
 {
     using Base::fn;
 
-    auto fn (string s = "foo")
+    auto fn (string s = "bar")
     {
         return s + "!!!"; // Hides Base::fn!
     }
@@ -37,6 +37,6 @@ int main ()
     assert(d_one.fn() == "foo");
 
     D_two d_two;
-    assert(d_two.fn() == "foo!!!");
+    assert(d_two.fn() == "bar!!!");
     assert(d_two.Base::fn() == "foo");
 }
